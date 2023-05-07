@@ -1,5 +1,5 @@
 #Import the OSD Module to initialize $OSDModuleResource
-Invoke-Expression -Command (Invoke-RestMethod -Uri functions.osdcloud.com)
+Invoke-Expression -Command (Invoke-RestMethod 'sandbox.osdcloud.com')
 
 #Customize the OSDCloud Defaults
 $OSDModuleResource.OSDCloud.Default.Activation = 'Retail'
