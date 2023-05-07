@@ -1,13 +1,28 @@
-Write-Host "Press any key to pause the script..."
+#Import the OSD Module to initialize $OSDModuleResource
+Import-Module OSD -Force
 
-$x = $host.UI.RawUI.ReadKey("NoEcho,IncludeKeyDown")
+#Customize the OSDCloud Defaults
+$OSDModuleResource.OSDCloud.Default.Activation = 'Retail'
+$OSDModuleResource.OSDCloud.Default.Edition = 'Pro'
+$OSDModuleResource.OSDCloud.Default.Language = 'en-gb'
 
-Write-Host "Type 'This Has Successfully RAN' to unpause and exit"
+#Customize the OSDCloud Values
+$OSDModuleResource.OSDCloud.Values.Activation = 'Retail'
+$OSDModuleResource.OSDCloud.Values.ReleaseID = '22H2','22H2'
+$OSDModuleResource.OSDCloud.Values.Edition = 'Pro'
+$OSDModuleResource.OSDCloud.Values.Name = 'Windows 11 22H2 x64','Windows 10 22H2 x64'
+$OSDModuleResource.OSDCloud.Values.Language = 'en-gb'
 
-do {
+#Customize the OSDCloudGUI Preferences
+$OSDModuleResource.StartOSDCloudGUI.ClearDiskConfirm = $true
+$OSDModuleResource.StartOSDCloudGUI.restartComputer = $true
+$OSDModuleResource.StartOSDCloudGUI.updateDiskDrivers = $true
+$OSDModuleResource.StartOSDCloudGUI.updateFirmware = $true
+$OSDModuleResource.StartOSDCloudGUI.updateSCSIDrivers = $true
 
-    $input = Read-Host
+#Customize the OSDCloudGUI
+$OSDModuleResource.StartOSDCloudGUI.BrandName = 'PCSP Cloud'
+$OSDModuleResource.StartOSDCloudGUI.BrandColor = 'GREEN'
 
-} until ($input -eq "This Has Successfully RAN")
-
-Write-Host "Script has successfully ran"
+#Start OSDCloud GUI
+Start-OSDCloudGUI
