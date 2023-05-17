@@ -1,3 +1,7 @@
+#Make sure I have the latest OSD Content
+Write-Host -ForegroundColor Green "Updating OSD PowerShell Module"
+Install-Module OSD -Force
+
 #Import the OSD Module to initialize $OSDModuleResource
 Import-Module OSD -Force
 
