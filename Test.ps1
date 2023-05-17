@@ -1,3 +1,6 @@
+#Invoke OSD Functions
+Invoke-Expression -Command (Invoke-RestMethod -Uri functions.osdcloud.com)
+
 #Import the OSD Module to initialize $OSDModuleResource
 Import-Module OSD -Force
 
