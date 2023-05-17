@@ -17,8 +17,8 @@ $OSDModuleResource.OSDCloud.Values.Name = 'Windows 11 22H2 x64','Windows 11 21H2
 $OSDModuleResource.OSDCloud.Values.Language = 'en-gb'
 
 #Customize the OSDCloudGUI Preferences
-$OSDModuleResource.StartOSDCloudGUI.ClearDiskConfirm = $false
-$OSDModuleResource.StartOSDCloudGUI.restartComputer = $false
+$OSDModuleResource.StartOSDCloudGUI.ClearDiskConfirm = $true
+$OSDModuleResource.StartOSDCloudGUI.restartComputer = $true
 $OSDModuleResource.StartOSDCloudGUI.updateDiskDrivers = $true
 $OSDModuleResource.StartOSDCloudGUI.updateFirmware = $true
 $OSDModuleResource.StartOSDCloudGUI.updateSCSIDrivers = $true
